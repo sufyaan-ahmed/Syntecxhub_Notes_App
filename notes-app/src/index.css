@@ -1,0 +1,159 @@
+.notes-app-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.app-header h1 {
+    color: #333;
+    font-weight: 600;
+}
+
+.add-note-form {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.add-note-form input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.add-note-form input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.add-note-form button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.add-note-form button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.add-note-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* --- Notes List Styling --- */
+.notes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.note-item {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.note-text {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    white-space: pre-wrap; 
+}
+
+.note-timestamp {
+    color: #6c757d;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.note-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.note-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.delete-btn {
+    background-color: #dc3545; 
+    color: white;
+}
+
+.save-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.note-item textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    min-height: 80px;
+    box-sizing: border-box;
+}
+
+.empty-message {
+    text-align: center;
+    color: #6c757d;
+    padding: 20px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .notes-app-container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+    .add-note-form {
+        flex-direction: column;
+    }
+    .add-note-form button {
+        width: 100%;
+    }
+}
